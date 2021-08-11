@@ -1,0 +1,70 @@
+<div class="board-view-wrap">
+    <div class="board-head">
+        <p class="date">2021-07-19</p>
+        <p class="title">제목이 들어감</p>
+        @@if(!context.qna){
+            <ul class="info">
+                <li>작성자 : 관리자</li>
+                <li>조회 : 99</li>
+            </ul>
+        }
+        @@if(context.qna){
+            <ul class="info">
+                <li>연락처 : 000-0000-0000</li>
+                <li>이메일 : abc@naver.com</li>
+            </ul>
+        }
+    </div>
+    <div class="board-body">
+        <!-- 첨부파일 없을 때 DOM 삭제 -->
+        <div class="file-info">
+            <dl>
+                <dt>첨부파일</dt>
+                <dd><a href="">첨부파일명.jpg</a></dd>
+                <dd><a href="">첨부파일명.jpg</a></dd>
+                <dd><a href="">첨부파일명.jpg</a></dd>
+            </dl>
+        </div>
+        <!-- // 첨부파일 없을 때 DOM 삭제 -->
+        <div class="cont">
+            에디터 내용이 들어감<br>
+            에디터 내용이 들어감<br>
+            에디터 내용이 들어감<br>
+            에디터 내용이 들어감<br>
+            에디터 내용이 들어감<br>
+            에디터 내용이 들어감
+        </div>
+        @@if(context.qna){
+            <div class="answer-cont">
+                <p class="date">2021-00-00</p>
+                <p class="tit">답변 제목이 들어감</p>
+                <div class="a-cont">
+                    답변 내용이 들어감<br>
+                    답변 내용이 들어감<br>
+                    답변 내용이 들어감<br>
+                    답변 내용이 들어감<br>
+                    답변 내용이 들어감
+                </div>
+            </div>
+        }
+    </div>
+    <div class="board-foot">
+        @@if(!context.qna){
+            <ul class="others">
+                <li>
+                    <dl>
+                        <dt>이전글</dt>
+                        <dd><a href="">이전글 제목이 들어감</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>다음글</dt>
+                        <dd><a href="">다음글 제목이 들어감 다음글 제목이 들어감 다음글 제목이 들어감 다음글 제목이 들어감</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        }
+        <a href="/page/@@prev.html" class="btn btn-md btn-gray"><span>목록으로</span></a>
+    </div>
+</div>

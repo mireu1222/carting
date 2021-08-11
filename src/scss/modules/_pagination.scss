@@ -1,0 +1,121 @@
+/* pagination */
+.pagination {
+    margin-top:60px;
+    font-size:0;
+    text-align:center;
+    white-space:nowrap;
+    @include mobile {
+        margin-top:30px;
+    }
+    .control-btn, 
+    .page-btn-wrap,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        display:inline-block;
+        vertical-align:top;
+    }
+    .control-btn,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        width:34px;
+        height:34px;
+        font-size:16px;
+        color:#666;
+        border:1px solid $border;
+        border-left:none;
+        line-height:32px;
+        background:#fff;
+        @include mobile {
+            width:30px;
+            height:30px;
+            font-size:13px;
+            line-height:28px;
+        }
+    }
+    .control-btn {
+        position:relative;
+        border-color:$border;
+        &::before,
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:10px;
+            height:10px;
+            margin-top:-5px;
+            border:1px solid $cont;
+            border-bottom:none;
+            border-right:none;
+            @include mobile {
+                width:8px;
+                height:8px;
+                margin-top:-4px;
+            }
+        }
+        &.prev,
+        &.pprev {
+            &::before,
+            &::after {
+                transform:rotate(-45deg);
+            }
+        }
+        &.prev {
+            &::before {
+                margin-left:-3px;
+            }
+        }
+        &.pprev {
+            &::before {
+                margin-left:-5px;
+            }
+        }
+        &.next,
+        &.nnext {
+            &::before,
+            &::after {
+                transform:rotate(135deg);
+            }
+        }
+        &.next {
+            &::before {
+                margin-left:-8px;
+                @include mobile {
+                    margin-left:-6px;
+                }
+            }
+        }
+        &.nnext {
+            &::before {
+                margin-left:-11px;
+                @include mobile {
+                    margin-left:-9px;
+                }
+            }
+            &::after {
+                margin-left:-6px;
+                @include mobile {
+                    margin-left:-4px;
+                }
+            }
+        }
+        &.prev,
+        &.next {
+            &::after {
+                display:none;
+            }
+        }
+    }
+    .page-btn-wrap {
+        margin:0;
+        .now {
+            background:#333;
+            border-color:#333;
+            color:#fff;
+            font-weight:500;
+        }
+    }
+    > *:first-child {
+        border-left:1px solid $border;
+    }
+}

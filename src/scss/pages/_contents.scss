@@ -1,0 +1,222 @@
+.container {
+    .page-area {
+        @include contArea;
+    }
+    section {
+        padding:45px 0;
+        &:nth-child(even) {
+            background:$disabled;
+        }
+        @include mobile {
+            padding:20px 0;
+        }
+    }
+
+    /* 파트너스 이용안내 */
+    .sub02 {
+        margin-top:-50px;
+        @include mobile {
+            margin-top:-30px;
+        }
+        section {
+            &:nth-child(odd) {
+                .flex {
+                    .text {
+                        align-items:flex-end;
+                    }
+                    .img {
+                        padding-left:100px;
+                        @include tablet {
+                            padding-left:30px;
+                        }
+                        @include mobile {
+                            padding-left:10px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(even) {
+                .flex {
+                    .text {
+                        order:2;
+                    }
+                    .img {
+                        text-align:right;
+                        padding-right:100px;
+                        @include tablet {
+                            padding-right:30px;
+                        }
+                        @include mobile {
+                            padding-right:10px;
+                        }
+                    }
+                }
+            }
+            .flex {
+                display:flex;
+                align-items:center;
+                @include contArea;
+                > * {
+                    width:50%;
+                }
+                .text {
+                    display:flex;
+                    flex-direction:column;
+                    word-break:keep-all;
+                    padding:15px 0;
+                    > * {
+                        width:100%;
+                        max-width:400px;
+                    }
+                    h3 {
+                        margin-bottom:20px;
+                        font-size:30px;
+                        line-height:1.2;
+                        font-weight:500;
+                        small {
+                            display:block;
+                            font-size:20px;
+                            font-weight:700;
+                            color:$point;
+                        }
+                        @include mobile {
+                            font-size:24px;
+                            small {
+                                font-size:16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-group {
+            margin-top:20px;
+            @include mobile {
+                padding:0 12px;
+            }
+            .btn.btn-go {
+                width:300px;
+                @include mobile {
+                    width:100%;
+                }
+            }
+        }
+    }
+
+    /* 서비스 이용안내 */
+    .sub03 {
+        margin-top:-50px;
+        @include mobile {
+            margin-top:-30px;
+        }
+        .flex {
+            display:flex;
+            @include contArea;
+            word-break:keep-all;
+            @include mobile {
+                display:block;
+            }
+            > h3 {
+                width:365px;
+                min-width:365px;
+                padding-right:30px;
+                font-size:30px;
+                font-weight:500;
+                &::before {
+                    content:' ';
+                    display:block;
+                    width:60px;
+                    height:60px;
+                    margin-bottom:10px;
+                    @include bg;
+                }
+                @include tablet {
+                    width:30%;
+                    min-width:30%;
+                }
+                @include mobile {
+                    width:100%;
+                    min-width:auto;
+                    padding-left:40px;
+                    font-size:24px;
+                    line-height:30px;
+                    br {
+                        display:none;
+                    }
+                    &::before {
+                        display:inline-block;
+                        vertical-align:top;
+                        width:30px;
+                        height:30px;
+                        margin-left:-40px;
+                        margin-right:10px;
+                        margin-bottom:0;
+                    }
+                }
+            }
+            .text {
+                padding-top:70px;
+                @include mobile {
+                    margin-top:20px;
+                    padding-top:0;
+                }
+                h4 {
+                    margin-top:40px;
+                    padding-left:20px;
+                    @include font-md;
+                    @include mobile {
+                        margin-top:20px;
+                    }
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    span {
+                        display:inline-block;
+                        width:20px;
+                        margin-left:-20px;
+                    }
+                }
+                .bullet-list {
+                    margin-top:6px;
+                    margin-left:20px;
+                }
+                p {
+                    @include font-md;
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            section:nth-child(#{$i}) .flex > h3::before {
+                background-image:url('/images/icon/icon-sub03-#{$i}.png');
+            }
+        }
+        .bottom {
+            @include contArea;
+            .bg {
+                padding:40px 12px;
+                border-radius:4px;
+                background:$disabled;
+                text-align:center;
+                @include mobile {
+                    padding:20px 12px;
+                }
+                .chk-wrap {
+                    display:block;
+                    margin-bottom:25px;
+                    @include mobile {
+                        margin-bottom:15px;
+                    }
+                    input + label {
+                        color:#333;
+                    }
+                }
+                .btn {
+                    width:300px;
+                    @include mobile {
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}

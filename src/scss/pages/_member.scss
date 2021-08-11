@@ -1,0 +1,234 @@
+/* member */
+.member-wrap {
+    width:100%;
+    max-width:790px;
+    margin:0 auto;
+    padding:100px 20px 0;
+    @include mobile {
+        padding:50px 16px 0;
+    }
+    h2.title {
+        margin-bottom:50px;
+        text-align:center;
+        @include font-xl;
+        font-weight:500;
+        @include mobile {
+            margin-bottom:30px;
+        }
+        &.logo {
+            &::before {
+                content:' ';
+                display:block;
+                width:140px;
+                height:36px;
+                margin:0 auto 30px;
+                background:url('/images/logo-sm.png');
+                @include mobile {
+                    width:100px;
+                    height:26px;
+                    margin-bottom:10px;
+                    background-size:100%;
+                }
+            }
+        }
+    }
+
+    // 회원가입 버튼
+    .button-lists {
+        li {
+            margin-top:15px;
+            text-align:center;
+            @include mobile {
+                margin-top:10px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+            a {
+                position:relative;
+                display:inline-block;
+                vertical-align:top;
+                width:100%;
+                max-width:450px;
+                height:70px;
+                padding-left:40px;
+                border-radius:4px;
+                font-size:18px;
+                color:#fff;
+                text-align:center;
+                font-weight:500;
+                line-height:70px;
+                @include mobile {
+                    height:60px;
+                    line-height:60px;
+                    font-size:16px;
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:0;
+                    bottom:0;
+                    @include calcs(left, 100px, 450px);
+                    width:40px;
+                    height:100%;
+                    margin-right:10px;
+                    @include mobile {
+                        width:30px;
+                        background-size:100% auto !important;
+                    }
+                }
+                &.btn01 {
+                    background:#3dab49;
+                    &::before {
+                        background:url('/images/icon/icon-naver.png') center no-repeat;
+                    }
+                }
+                &.btn02 {
+                    background:#ffe600;
+                    color:#371d1d;
+                    &::before {
+                        background:url('/images/icon/icon-kakao.png') center no-repeat;
+                    }
+                }
+                &.btn03 {
+                    background:$point;
+                    &::before {
+                        background:url('/images/icon/icon-infl.png') center no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    // 약관
+    .agree-wraps {
+        margin-top:50px;
+        padding:30px 20px;
+        border:1px solid #eee;
+        border-radius:4px;
+        @include mobile {
+            margin-top:30px;
+            padding:20px 16px;
+        }
+        .chk-wrap.all {
+            display:block;
+            margin-bottom:20px;
+            padding-bottom:20px;
+            border-bottom:1px solid #ddd;
+            input + label {
+                color:#333;
+                font-weight:500;
+            }
+        }
+        .terms-lists {
+            li {
+                margin-top:20px;
+                &:first-child {
+                    margin-top:0;
+                }
+                .titles {
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                }
+                .conts {
+                    display:none;
+                    max-height:150px;
+                    margin:20px -20px 0;
+                    padding:20px;
+                    background:#f5f5f5;
+                    color:#666;
+                    @include font-sm;
+                    overflow-y:auto;
+                }
+            }
+        }
+    }
+
+    .btn-group {
+        .btn.btn-lg:only-child {
+            width:100%;
+            max-width:450px;
+        }
+    }
+
+    // 아이디/비밀번호 찾기
+    .find-cont-wrap {
+        .find-tabs {
+            position:relative;
+            &::before {
+                content:' ';
+                position:absolute;
+                left:0;
+                bottom:0;
+                right:0;
+                height:1px;
+                background:#ddd;
+            }
+            ul.tabs {
+                position:relative;
+                font-size:0;
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    width:50%;
+                    a {
+                        display:block;
+                        height:46px;
+                        border-bottom:2px solid transparent;
+                        color:#888;
+                        @include font-md;
+                        font-weight:500;
+                        text-align:center;
+                        @include mobile {
+                            height:40px;
+                        }
+                    }
+                    &.active a {
+                        color:$point;
+                        border-color:$point;
+                    }
+                }
+            }
+        }
+        .radio-tabs {
+            margin-bottom:30px;
+            font-size:0;
+            text-align:center;
+            li {
+                display:inline-block;
+                vertical-align:top;
+                margin-right:40px;
+                &:last-child {
+                    margin-right:0;
+                }
+            }
+        }
+        .find-conts {
+            padding-top:50px;
+            @include mobile {
+                padding-top:30px;
+            }
+            > .tit {
+                @include font-lg;
+                text-align:center;
+            }
+            .desc {
+                margin-top:5px;
+                color:$cont;
+                @include font;
+                text-align:center;
+            }
+            .input-box {
+                margin-top:50px;
+                padding:30px 20px;
+                border:1px solid #eee;
+                border-radius:4px;
+                @include mobile {
+                    margin-top:30px;
+                    padding:20px 16px;
+                }
+            }
+        }
+    }
+}

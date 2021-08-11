@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : true,
+        })
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container">
+            @@include('./layout/page-title.html', {
+                cate03 : true,
+            })
+
+            <div class="contents-area">
+                <div class="sub03">
+                    <section>
+                        <div class="flex">
+                            <h3>이용요금안내</h3>
+                            <div class="text">
+                                <h4><span>1)</span>견적보내기 수수료(초기 파트너스 50,000포인트 무료 지급!)</h4>
+                                <ul class="bullet-list">
+                                    <li>고객의 견적요청에 따른 견적서를 보낼 때 수수료가 발생 합니다.</li>
+                                    <li>견적서 발송 시 수수료는 카팅 캐시 및 포인트에서 차감됩니다.</li>
+                                    <li>단, 고객이 견적서를 48시간 이내로 읽지 않으면 적립 포인트로 환급됩니다.</li>
+                                    <li>견적 보내기 수수료는 요청 지역, 차종, 견적금액에 따라 상이합니다.</li>
+                                </ul>
+                                <h4><span>2)</span>결제 수수료</h4>
+                                <ul class="bullet-list">
+                                    <li>카팅에서 결제 시 총 5% 수수료 발생합니다. (카드 수수료 3.3% 포함)</li>
+                                    <li>ex) 500,000원 결제 시 파트너스는 카드 세금이 포함된 수수료 5%를 제 외한 475,000원의 수익이 발생합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <h3>카팅 캐시 충전 안내</h3>
+                            <div class="text">
+                                <h4><span>1)</span>카팅 캐시 충전</h4>
+                                <ul class="bullet-list">
+                                    <li>신용카드/무통장 입금/카카오페이/토스/네이버페이를 통해 충전이 가능합니다.</li>
+                                    <li>카팅 캐시 및 포인트가 부족하면 견적서 발송이 불가합니다.</li>
+                                </ul>
+                                <h4><span>2)</span>적립금 안내</h4>
+                                <ul class="bullet-list">
+                                    <li>고객이 견적서를 48시간 이내로 읽지 않으면 적립 포인트로 환급됩니다.</li>
+                                    <li>적립 포인트는 환불이 불가합니다.</li>
+                                </ul>
+                                <h4><span>3)</span>충전 금액 환불</h4>
+                                <ul class="bullet-list">
+                                    <li>환불 버튼을 누르신 후 환불 금액을 입력하시면 환전이 가능합니다.</li>
+                                    <li>단, 적립금은 환전이 불가합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <h3>카팅 결제 및 <br>정산 시스템 안내</h3>
+                            <div class="text">
+                                <h4><span>1)</span>결제 대행 서비스 안내</h4>
+                                <ul class="bullet-list">
+                                    <li>시공 예약이 확정된 후 시공 금액을 웹에서 결제할 수 있는 “카팅 결제” 기능이 있습니다.</li>
+                                    <li>결제 금액은 수수료를 제외하고 파트너샵에 정산됩니다</li>
+                                </ul>
+                                <h4><span>2)</span>결제 방법</h4>
+                                <ul class="bullet-list">
+                                    <li>고객은 최종 확정된 시공금액을 카팅 웹에서 신용카드/무통장 입금/카카오페이/네이버페이/토스를 통해 결제 할 수 있습니다.</li>
+                                    <li>결제 금액은 파트너스가 발송한 최종 견적서를 기반으로 정해집니다.</li>
+                                </ul>
+                                <h4><span>3)</span>정산 방법</h4>
+                                <ul class="bullet-list">
+                                    <li>카드 수수료 3.3%를 포함한 총 결제금액의 5%의 수수료가 발생합니다.</li>
+                                    <li>시공완료가 된 당일 오후 5시 이후에 5%의 수수료를 제외한 금액이 파트너스가 등록한 계좌로 입금됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <h3>파트너스 서비스 이용제한 및 계약 해지</h3>
+                            <div class="text">
+                                <p>법률상 문제가 있거나 커팅과 파트너 관계를 유지할 수 없는 사유가 확인된 경우 카팅은 약관의 내용에 따라 서비스 이용을 제한하거나 이용계약을 해지 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <h3>카팅 보증 안내</h3>
+                            <div class="text">
+                                <p>높은 고객 신뢰도를 제공하기 위해 카팅 보증 제도를 실시합니다. 고객이 믿고 맡길 수 있는 카팅 서비스에 대해 신뢰도를 높이고, 좋은 시공업체의 서비스를 제공하기 위함입니다. 보증 내용은 다음과 같습니다.</p>
+                                <h4><span>1)</span>차량 시공 전 확정된 견적 조건대로의 수리를 보증합니다.</h4>
+                                <ul class="bullet-list">
+                                    <li>최종 견적서와 다르거나 고객 동의없이 다른 부품이나 재료가 수리된 경우, 시공업체는 견적서 대로 재시공 또는 시공 금액을 환불하는 조취를 취해야 합니다.</li>
+                                </ul>
+                                <h4><span>2)</span>카팅을 통해 시공한 고객이 시공 후 2달 이내로 시공 결과 불만족 혹은 문제가 발생했을 시 1년 이내로 해당 시공건에 대해 재수리를 보증합니다.</h4>
+                                <ul class="bullet-list">
+                                    <li>만약 시공 고객이 다른 업체를 통한 재수리를 요구한 경우, 카팅이 다른 시공업체를 통해 재시공을 안내하고, 재시공 비용은 최초 시공업체가 부담합니다.</li>
+                                </ul>
+                                <h4><span>3)</span>보증내역 제외항목</h4>
+                                <ul class="bullet-list">
+                                    <li>견적서 내용 중 제시된 시공 날짜 보다 시공기간이 길어진 경우로 인한 간접적 피해는 보상하지 않습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="bottom">
+                        <div class="bg">
+                            <div class="chk-wrap">
+                                <input type="checkbox" id="chk" name="chk">
+                                <label for="chk">위 사항을 모두 확인 하였으며 이용약관에 동의합니다.</label>
+                            </div>
+                            <a href="" class="btn btn-lg btn-point"><span>업체 정보 등록하기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

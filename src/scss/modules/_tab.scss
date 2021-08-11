@@ -1,0 +1,349 @@
+/* tab */
+.button-tabs {
+    overflow:hidden;
+    &.type2 {
+        ul.tabs {
+            li.active a {
+                background:$point;
+            }
+        }
+    }
+    ul.tabs {
+        font-size:0;
+        white-space:nowrap;
+        li {
+            position:relative;
+            display:inline-block;
+            vertical-align:top;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:50%;
+                left:0;
+                width:1px;
+                height:12px;
+                margin-top:-6px;
+                background:#ddd;
+            }
+            &:first-child::before {
+                display:none;
+            }
+            &.active::before {
+                display:none;
+            }
+            &.active + li::before {
+                display:none;
+            }
+            a {
+                position:relative;
+                display:block;
+                height:30px;
+                padding:0 20px;
+                border-radius:15px;
+                background:transparent;
+                font-size:16px;
+                line-height:30px;
+                &.ud::after {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:36px;
+                    height:30px;
+                    margin-left:8px;
+                    background:url('/images/icon/icon-ud-off.png') center no-repeat;
+                }
+                @include mobile {
+                    padding:0 12px;
+                    font-size:14px;
+                }
+            }
+            &.active a {
+                color:$white;
+                background:$basic;
+                &.ud::after {
+                    background-image:url('/images/icon/icon-ud-on.png');
+                }
+            }
+        }
+    }
+}
+
+.border-tabs {
+    overflow:hidden;
+    @include contArea;
+    margin-bottom:60px;
+    @include tablet {
+        margin-bottom:50px;
+    }
+    @include mobile {
+        margin-bottom:40px;
+    }
+    ul.tabs {
+        position:relative;
+        display:flex;
+        min-width:100%;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:1px solid $border;
+        }
+        li {
+            position:relative;
+            flex:1;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                width:1px;
+                background:$border;
+            }
+            a {
+                position:relative;
+                display:block;
+                padding:0 15px;
+                border:3px solid transparent;
+                color:#666;
+                font-size:17px;
+                line-height:54px;
+                text-align:center;
+                white-space:nowrap;
+                @include mobile {
+                    border-width:2px;
+                    font-size:15px;
+                    line-height:38px;
+                }
+            }
+            &.active a {
+                border-color:$point;
+                color:$point;
+                font-weight:500;
+            }
+            &.active + li::before {
+                display:none;
+            }
+        }
+    }
+}
+
+.text-tabs {
+    overflow:hidden;
+    margin-bottom:30px;
+    @include mobile {
+        margin-bottom:15px;
+    }
+    ul.tabs {
+        min-width:100%;
+        font-size:0;
+        white-space:nowrap;
+        text-align:center;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            &::after {
+                content:' ';
+                display:inline-block;
+                vertical-align:middle;
+                width:1px;
+                height:12px;
+                background:#ddd;
+                margin:0 20px;
+            }
+            &:last-child::after {
+                display:none;
+            }
+            &.active a {
+                font-weight:700;
+                color:$point;
+            }
+            a {
+                display:inline-block;
+                vertical-align:middle;
+                @include font;
+            }
+        }
+    }
+}
+
+.category-tabs {
+    @include contArea;
+    margin-bottom:70px;
+    overflow:hidden;
+    @include mobile {
+        margin-bottom:40px;
+    }
+    ul.tabs {
+        font-size:0;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-left:20px;
+            &:first-child {
+                margin-left:0;
+            }
+            a {
+                display:block;
+                width:86px;
+                text-align:center;
+                color:#666;
+                font-size:16px;
+                font-weight:500;
+                @include mobile {
+                    width:auto;
+                    font-size:14px;
+                    white-space:nowrap;
+                }
+                .thumb {
+                    position:relative;
+                    display:block;
+                    height:86px;
+                    margin-bottom:20px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    @include mobile {
+                        width:44px;
+                        height:44px;
+                        margin:0 auto 10px;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        background:rgba(#000, 0.5);
+                        opacity:1;
+                    }
+                }
+            }
+            &.active a {
+                color:$point;
+                .thumb {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        border:3px solid $point;
+                        border-radius:50%;
+                    }
+                    &::after {
+                        opacity:0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prod-tabs {
+    position:relative;
+    &::before,
+    &::after {
+        content:' ';
+        position:absolute;
+        left:0;
+        right:0;
+        height:1px;
+        background:$border;
+        z-index:-1;
+    }
+    &::before {
+        top:0;
+    }
+    &::after {
+        bottom:0;
+    }
+    ul.tabs {
+        position:relative;
+        font-size:0;
+        text-align:center;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            width:25%;
+            a {
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                height:60px;
+                padding:0 5px;
+                font-size:18px;
+                font-weight:500;
+                line-height:20px;
+                text-align:center;
+                word-break:keep-all;
+                @include mobile {
+                    height:45px;
+                    font-size:14px;
+                    line-height:16px;
+                }
+            }
+            &.active a {
+                background:$point;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.under-tabs {
+    position:absolute;
+    top:252px;
+    left:50%;
+    @include contArea;
+    transform:translateX(-50%);
+    overflow:hidden;
+    @include tablet {
+        position:relative;
+        top:auto;
+        left:auto;
+        transform:translateX(0);
+        margin-bottom:30px;
+    }
+    ul.tabs {
+        @include pc {
+            width:100% !important;
+        }
+        text-align:right;
+        font-size:0;
+        white-space:nowrap;
+        @include tablet {
+            text-align:left;
+        }
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-left:35px;
+            @include mobile {
+                margin-left:15px;
+            }
+            &:first-child {
+                margin-left:0;
+            }
+            a {
+                display:block;
+                padding-bottom:8px;
+                border-bottom:2px solid transparent;
+                font-size:18px;
+                font-weight:500;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+            &.active a {
+                color:$point;
+                font-weight:700;
+                border-color:$point;
+            }
+        }
+    }
+}

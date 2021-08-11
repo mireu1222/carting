@@ -1,0 +1,28 @@
+<div class="list-filter">
+    <div class="search">
+        <input type="text" class="form-control" @@if(context.placeholder){placeholder="@@placeholder"}@@if(!context.placeholder){placeholder="검색어를 입력하세요"} aria-label="검색어 입력">
+        <button type="button" class="btn-search"><span class="blind">검색</span></button>
+    </div>
+    @@if(!context.tab){
+        <p class="total">Total<em>99</em></p>
+    }
+    @@if(context.tab){
+        <div class="button-tabs" aria-label="리스트 정렬 기준" data-toggle="class-toggle">
+            <div class="m-scroll">
+                <ul class="tabs">
+                    <li class="active"><a href="#n">인기순</a></li>
+                    <li><a href="#n">가격순</a></li>
+                    @@if(context.tab !== 'type2'){
+                        <li><a href="#n">거래량순</a></li>
+                        <li><a href="#n">관심순(즐겨찾기)</a></li>
+                    }
+                    @@if(context.tab === 'type2'){
+                        <li><a href="#n">최신등록순</a></li>
+                        <li><a href="#n">관심순(즐겨찾기)</a></li>
+                        <li><a href="#n">INS 오리지널 콘텐츠</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>

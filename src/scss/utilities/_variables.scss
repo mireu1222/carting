@@ -1,0 +1,94 @@
+// colors
+$black :        #111 !default;
+$basic :        #222 !default;
+$cont :         #666 !default;
+$gray :         #898989 !default;
+$placeholder :  #999 !default;
+$border :       #ddd !default;
+$point :        #008cd6 !default;
+$blur :         #eee !default;
+$white :        #fff !default;
+$disabled :     #f5f5f5 !default;
+$red :          #ec1b1b !default;
+$yellow :       #dea82a !default;
+
+$colors : (
+    "black" $black "dark",
+    "basic" $basic "dark",
+    "cont" $cont "dark",
+    "gray" $gray "dark",
+    "border" $border "bright",
+    "point" $point "dark", 
+    "blur" $blur "bright",
+    "white" $white "bright",
+    "red" $red "dark",
+    "yellow" $yellow "dark",
+) !default;
+$color-maps : (
+    "black" :   $black,
+    "basic" :   $basic,
+    "cont" :    $cont,
+    "gray" :    $gray,
+    "border" :  $border,
+    "point" :   $point,
+    "blur" :    $blur,
+    "white" :   $white,
+    "red" :     $red,
+    "yellow" :  $yellow,
+) !default;
+
+$min-contrast-ratio : 4.5 !default;
+
+// transition time
+$time : 0.15s;
+
+// font
+$font-family-square :       "NanumSquare", "noto sans KR", sans-serif !default;
+$font-family-notosans :     "noto sans KR", sans-serif !default;
+
+$font-size-base :       16px !default;
+
+// body
+$body-bg :              $white !default;
+$body-font-color :      $basic !default;
+
+$btn-transition : color $time ease-in-out, background-color $time ease-in-out, border-color $time ease-in-out !default;
+$input-transition : border-color $time ease-in-out !default;
+
+$btn-sizes : (
+    "sm" 14px 32px 10px 13px 28px,
+    "md" 16px 48px 10px 14px 40px,
+    "lg" 18px 58px 20px 16px 48px,
+) !default;
+
+// border
+$border-radius :        8px !default;
+$border-radius-sm :     2px !default;
+$border-radius-lg :     12px !default;
+
+$border-width :         1px !default;
+$border-widths : (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+) !default;
+
+//spacing
+$spacers : (
+    0:  0,
+    5:  5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px
+) !default;
+
+// shadow
+$boxshadow : 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+$textshadow : 0px 0px 16px rgba(0, 0, 0, 0.23);

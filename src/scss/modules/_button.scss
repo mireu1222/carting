@@ -1,0 +1,153 @@
+/* button */
+.btn {
+    display:inline-block;
+    padding:0 10px;
+    border:1px solid transparent;
+    border-radius:4px;
+    background:transparent;
+    font-size:16px;
+    line-height:48px;
+    vertical-align:top;
+    cursor:pointer;
+    transition:$btn-transition;
+    white-space:nowrap;
+    text-align:center;
+    @include mobile {
+        font-size:14px;
+        line-height:42px;
+    }
+    span {
+        display:inline-block;
+        vertical-align:top;
+    }
+    &.btn-go {
+        span {
+            position:relative;
+            display:block;
+            text-align:left;
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:3px;
+                width:10px;
+                height:10px;
+                margin-top:-5px;
+                border:1px solid currentColor;
+                border-top:none;
+                border-right:none;
+                transform:rotate(-135deg);
+            }
+        }
+    }
+    // style
+    @each $color, $value, $ratio in $colors {
+        &.btn-#{$color} {
+            background-color:$value;
+            border-color:$value;
+            @if $ratio == 'dark' {
+                color:$white;
+            } @else if $ratio == 'bright' {
+                color:$cont;
+            }
+            &:hover, 
+            &:active {
+                @if $ratio == 'dark' {
+                    background-color:tint-color($value, 15%);
+                    border-color:tint-color($value, 15%);
+                } @else if $ratio == 'bright' {
+                    background-color:shade-color($value, 10%);
+                    border-color:shade-color($value, 10%);
+                }
+            }
+        }
+        &.btn-border-#{$color} {
+            border-color:$value;
+            color:$value;
+            @include pc {
+                &:hover, 
+                &:active {
+                    background-color:rgba($value, .1);
+                }
+            }
+        }
+    }
+    // size
+    @each $size, $fontsize, $lineheight, $pd, $mfont, $mheight in $btn-sizes {
+        &.btn-#{$size} {
+            padding:0 $pd;
+            font-size:$fontsize;
+            line-height:$lineheight;
+            @if $size == 'lg' {
+                font-weight:500;
+            } @else if $size == 'md' {
+                min-width:120px;
+                font-weight:500;
+            }
+            @include mobile {
+                font-size:$mfont;
+                line-height:$mheight;
+            }
+            &.rounded {
+                border-radius:($lineheight / 2 + 1);
+            }
+        }
+    }
+    &.full {
+        display:block;
+        width:100%;
+    }
+    &:disabled {
+        border-color:#bbb;
+        background:#bbb;
+        color:#fff;
+        &:hover,
+        &:active {
+            border-color:#bbb;
+            background:#bbb;
+            color:#fff;
+        }
+    }
+}
+.btn-group {
+    display:flex;
+    margin-top:60px;
+    justify-content:center;
+    @include mobile {
+        margin-top:30px;
+    }
+    > * {
+        min-width:260px;
+        margin-left:10px;
+        &:first-child {
+            margin-left:0;
+        }
+        @include mobile {
+            flex:1;
+            min-width:auto;
+            margin-left:5px;
+        }
+    }
+}
+
+/* text link */
+@each $color, $value, $ratio in $colors {
+    .link-#{$color} {
+        display:inline-block;
+        vertical-align:top;
+        color:$value;
+        @include font;
+        transition:$btn-transition;
+        @include pc {
+            &:hover, 
+            &:active {
+                text-decoration:underline;
+                @if $ratio == 'dark' {
+                    color:tint-color($value, 15%);
+                } @else if $ratio == 'bright' {
+                    color:shade-color($value, 10%);
+                }
+            }
+        }
+    }
+}

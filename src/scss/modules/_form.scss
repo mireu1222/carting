@@ -1,0 +1,196 @@
+/* form */
+.form-title {
+    max-width:750px;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:25px 12px;
+    background:#eee;
+    border-radius:10px;
+    @include font-md;
+    color:#666;
+    text-align:center;
+    word-break:keep-all;
+    @include mobile {
+        margin-bottom:15px;
+        padding:20px 12px;
+    }
+}
+.form-wrap {
+    max-width:750px;
+    margin:0 auto;
+    padding:30px 25px;
+    border:1px solid $border;
+    border-radius:10px;
+    @include mobile {
+        padding:20px 12px;
+    }
+    .essen-txt {
+        margin-bottom:45px;
+        color:#888;
+        font-size:14px;
+        text-align:right;
+        &::before {
+            content:'*';
+            color:$red;
+            margin-right:2px;
+        }
+        @include mobile {
+            margin-bottom:35px;
+            font-size:12px;
+        }
+    }
+    .row {
+        margin-top:35px;
+        @include mobile {
+            margin-top:25px;
+        }
+        &:first-child {
+            margin-top:0;
+        }
+        > label,
+        > p.label {
+            display:block;
+            margin-bottom:10px;
+            font-size:16px;
+            font-weight:500;
+            @include mobile {
+                margin-bottom:6px;
+                font-size:14px;
+            }
+            &.essen {
+                &::after {
+                    content:'*';
+                    margin-left:2px;
+                    color:$red;
+                }
+            }
+        }
+        .forms {
+            display:flex;
+            > * ~ * {
+                margin-left:10px;
+                @include mobile {
+                    margin-left:5px;
+                }
+            }
+            .btn {
+                min-width:160px;
+                @include mobile {
+                    min-width:100px;
+                }
+            }
+        }
+    }
+    .error-msg {
+        margin-top:10px;
+        font-size:14px;
+        color:$red;
+        @include mobile {
+            margin-top:6px;
+            font-size:12px;
+        }
+        &::before {
+            content:'!';
+            display:inline-block;
+            vertical-align:top;
+            width:14px;
+            height:14px;
+            margin-right:4px;
+            border-radius:50%;
+            background:$red;
+            color:#fff;
+            font-size:11px;
+            line-height:14px;
+            text-align:center;
+            @include mobile {
+                width:12px;
+                height:12px;
+                line-height:12px;
+            }
+        }
+        &:empty {
+            margin-top:0;
+            &::before {
+                display:none;
+            }
+        }
+    }
+}
+
+/* file upload */
+.inputfile-wrap {
+    position:relative;
+    display:flex;
+    width:100%;
+    input[type="file"] {
+        position:absolute;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        padding:0;
+        border:0;
+        overflow:hidden;
+        clip:rect(0, 0, 0, 0);
+    }
+    label.btn {
+        order:2;
+        display:block;
+        margin-left:10px;
+        @include mobile {
+            margin-left:5px;
+        }
+    }
+}
+
+.agree-wraps {
+    max-width:750px;
+    margin:60px auto 0;
+    border:1px solid $border;
+    border-radius:10px;
+    padding:30px 25px;
+    @include mobile {
+        margin-top:30px;
+        padding:20px 12px;
+    }
+    .chk-wrap.all {
+        display:block;
+        padding-bottom:20px;
+        border-bottom:1px solid $border;
+    }
+    .terms-lists {
+        > li {
+            margin-top:30px;
+            @include mobile {
+                margin-top:20px;
+            }
+            &:first-child {
+                margin-top:20px;
+            }
+            .titles {
+                display:flex;
+                align-items:center;
+                .link-basic {
+                    margin-left:auto;
+                    font-size:16px;
+                    @include mobile {
+                        font-size:14px;
+                    }
+                }
+            }
+            .conts {
+                display:none;
+                max-height:180px;
+                overflow-y:auto;
+                margin:15px -26px 0;
+                padding:20px 26px;
+                background:$disabled;
+                color:$cont;
+                @include font;
+                @include mobile {
+                    margin:10px -13px 0;
+                    padding:15px 12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+/* board */
+.board-list-wrap {
+    border-top:1px solid $border;
+    padding-top:30px;
+    @include mobile {
+        padding-top:20px;
+    }
+    ul.lists {
+        display:flex;
+        flex-wrap:wrap;
+        margin-top:-40px;
+        margin-left:-50px;
+        @include tablet {
+            margin-top:-30px;
+            margin-left:-20px;
+        }
+        @include mobile {
+            display:block;
+            margin:0;
+        }
+        > li {
+            width:calc(100% / 3);
+            padding-left:50px;
+            margin-top:40px;
+            @include tablet {
+                padding-left:20px;
+                margin-top:30px;
+            }
+            @include mobile {
+                width:100%;
+                padding:0;
+                margin-top:20px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            a.inner {
+                display:block;
+                padding:30px 20px;
+                background:#fff;
+                box-shadow:$boxshadow;
+                @include mobile {
+                    padding:12px;
+                }
+                .top {
+                    margin-bottom:5px;
+                    @include font-sm;
+                    font-weight:500;
+                }
+                .tit {
+                    position:relative;
+                    display:inline-block;
+                    max-width:100%;
+                    @include font;
+                    font-weight:500;
+                    @include textEllipsis;
+                    &.new {
+                        padding-right:20px;
+                        &::after {
+                            content:'N';
+                            position:absolute;
+                            top:50%;
+                            right:0;
+                            width:16px;
+                            height:16px;
+                            margin-top:-8px;
+                            border:1px solid $point;
+                            border-radius:50%;
+                            color:$point;
+                            font-size:11px;
+                            line-height:14px;
+                            font-weight:700;
+                            text-align:center;
+                        }
+                    }
+                }
+                .cont {
+                    height:24*5px;
+                    margin-top:20px;
+                    color:#666;
+                    @include font;
+                    @include textEllipsisClamp(5);
+                    @include mobile {
+                        height:auto;
+                        margin-top:0;
+                    }
+                }
+                .date {
+                    margin-top:25px;
+                    font-size:14px;
+                    font-weight:500;
+                    @include mobile {
+                        margin-top:15px;
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.board-view-wrap {
+    .board-head {
+        padding-bottom:20px;
+        border-bottom:1px solid #ddd;
+        @include mobile {
+            padding-bottom:15px;
+        }
+        .date {
+            margin-bottom:5px;
+            font-size:16px;
+            color:#888;
+            @include mobile {
+                font-size:14px;
+            }
+        }
+        .title {
+            @include font-xl;
+            font-weight:500;
+        }
+        ul.info {
+            margin-top:20px;
+            font-size:0;
+            @include mobile {
+                margin-top:15px;
+            }
+            li {
+                display:inline-block;
+                vertical-align:top;
+                font-size:16px;
+                color:#888;
+                margin-right:20px;
+                @include mobile {
+                    font-size:14px;
+                }
+            }
+        }
+    }
+    .board-body {
+        padding:20px 0 60px;
+        @include mobile {
+            padding:15px 0 40px;
+        }
+        .file-info {
+            background:$disabled;
+            padding:20px;
+            margin-bottom:20px;
+            @include mobile {
+                padding:12px;
+            }
+            dl {
+                display:flex;
+                @include font-sm;
+                @include mobile {
+                    display:block;
+                }
+                dt {
+                    margin-right:10px;
+                    font-weight:500;
+                    white-space:nowrap;
+                    @include mobile {
+                        margin-bottom:5px;
+                        margin-right:0;
+                        padding-bottom:5px;
+                        border-bottom:1px solid #ddd;
+                    }
+                }
+                dd {
+                    &::after {
+                        content:'/';
+                        margin:0 6px;
+                        color:#ddd;
+                        @include mobile {
+                            display:none;
+                        }
+                    }
+                    &:last-child::after {
+                        display:none;
+                    }
+                    a {
+                        display:inline-block;
+                        vertical-align:top;
+                    }
+                }
+            }
+        }
+        .cont {
+            @include font;
+        }
+        .answer-cont {
+            margin-top:50px;
+            background:$disabled;
+            padding:20px;
+            .date {
+                color:#888;
+                font-size:16px;
+            }
+            .tit {
+                margin-bottom:15px;
+                @include font-lg;
+                font-weight:500;
+            }
+            .a-cont {
+                color:#666;
+                @include font;
+            }
+        }
+    }
+    .board-foot {
+        position:relative;
+        .others {
+            margin-top:60px;
+            margin-bottom:60px;
+            border-top:1px solid $border;
+            @include mobile {
+                margin-top:30px;
+                margin-bottom:40px;
+            }
+            li {
+                padding:15px 0;
+                border-bottom:1px solid #ddd;
+                @include mobile {
+                    padding:10px 0;
+                }
+                dl {
+                    display:flex;
+                    @include font;
+                    dt {
+                        margin-right:20px;
+                        white-space:nowrap;
+                        font-weight:500;
+                    }
+                    dd {
+                        width:100%;
+                        overflow:hidden;
+                        a {
+                            display:inline-block;
+                            vertical-align:top;
+                            max-width:100%;
+                            @include textEllipsis;
+                        }
+                    }
+                }
+            }
+        }
+        .btn.btn-md {
+            display:block;
+            width:100%;
+            max-width:200px;
+            margin:0 auto;
+            @include mobile {
+                max-width:none;
+            }
+        }
+    }
+}

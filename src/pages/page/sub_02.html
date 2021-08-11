@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true,
+        })
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+            })
+
+            <div class="contents-area">
+                <div class="sub02">
+                    <section>
+                        <div class="flex">
+                            <div class="text">
+                                <h3>
+                                    <small>01</small>
+                                    고객의 견적서를 무료로 보내드려요
+                                </h3>
+                                <ul class="bullet-list">
+                                    <li>고객이 신차패키지 등 서비스 의료 견적서를 요청합니다.</li>
+                                    <li>검토 후 사장님께 카톡/문자를 통해 알림이 전달됩니다.</li>
+                                </ul>
+                            </div>
+                            <span class="img">
+                                <img src="/images/img/img-sub02-1.png" alt="" aria-hidden="true">
+                            </span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <div class="text">
+                                <h3>
+                                    <small>02</small>
+                                    견적 보낼 고객을 선택하세요
+                                </h3>
+                                <ul class="bullet-list">
+                                    <li>고객의 견적요청에 적절한 금액과 설명으로 견적을 보냅니다.</li>
+                                    <li>채팅방을 통해 쉽게 고객과 상담하세요.</li>
+                                    <li>견적을 보내려면 무료로 제공된 "카팅포인트"를 사용하세요.</li>
+                                </ul>
+                            </div>
+                            <span class="img">
+                                <img src="/images/img/img-sub02-2.png" alt="" aria-hidden="true">
+                            </span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex">
+                            <div class="text">
+                                <h3>
+                                    <small>03</small>
+                                    예약(탁송) 날짜에 맞춰 시공하세요
+                                </h3>
+                                <ul class="bullet-list">
+                                    <li>결제 및 예약완료시 지정된 날짜에 서비스를 제공합니다.</li>
+                                    <li>서비스가 완료되면 시공 완료버튼을 눌러주세요.</li>
+                                </ul>
+                            </div>
+                            <span class="img">
+                                <img src="/images/img/img-sub02-3.png" alt="" aria-hidden="true">
+                            </span>
+                        </div>
+                    </section>
+                    <div class="btn-group">
+                        <a href="" class="btn btn-lg btn-basic btn-go"><span>카팅 파트너스 신청하기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

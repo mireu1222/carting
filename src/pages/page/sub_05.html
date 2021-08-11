@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate05 : true,
+        })
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container">
+            @@include('./layout/page-title.html', {
+                cate05 : true,
+            })
+
+            <div class="contents-area">
+                <div class="page-area">
+                    <h3 class="form-title">이메일과 비밀번호는 카팅의 파트너스 계정으로 활용됩니다. 정확하게 입력해 주세요.</h3>
+                    <form action="">
+                        <div class="form-wrap">
+                            <p class="essen-txt" aria-hidden="true">필수 입력 정보입니다.</p>
+                            <div class="row">
+                                <label for="ipt01" class="essen">업체명</label>
+                                <div class="forms">
+                                    <input type="text" class="form-control" id="ipt01" aria-required="true" placeholder="업체명을 입력하세요">
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt02" class="essen">대표자명</label>
+                                <div class="forms">
+                                    <input type="text" class="form-control" id="ipt02" aria-required="true" placeholder="대표자명을 입력하세요">
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt03" class="essen">비밀번호</label>
+                                <div class="forms">
+                                    <input type="password" class="form-control" id="ipt03" aria-required="true" placeholder="비밀번호(영문, 숫자, 특수기호 포함 6~16자)를 입력하세요" title="영문, 숫자, 특수기호 포함 6~16자의 비밀번호 입력">
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt04" class="essen">비밀번호 재입력</label>
+                                <div class="forms">
+                                    <input type="password" class="form-control" id="ipt04" aria-required="true" placeholder="비밀번호를 동일하게 재입력하세요" title="기 입력한 비밀번호를 동일하게 한번 더 입력">
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt05" class="essen">이메일</label>
+                                <div class="forms">
+                                    <input type="text" class="form-control" id="ipt05" aria-required="true" placeholder="이메일을 입력하세요">
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt06" class="label essen">전화번호</label>
+                                <div class="forms">
+                                    <input type="number" class="form-control" id="ipt06" aria-required="true" placeholder="`-`를 제외하고 입력하세요" title="`-`를 제외한 숫자만 입력">
+                                    <button type="button" class="btn btn-point"><span>번호추가</span></button>
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt06" class="essen">주소</label>
+                                <div class="forms">
+                                    <input type="text" class="form-control" id="ipt06" readonly aria-required="true">
+                                    <a href="" class="btn btn-point"><span>주소검색</span></a>
+                                </div>
+                                <p class="error-msg">에러메시지</p>
+                            </div>
+                            <div class="row">
+                                <label for="ipt07">사업자등록증</label>
+                                <div class="forms">
+                                    <div class="inputfile-wrap">
+                                        <input type="file" id="upload-file">
+                                        <label for="upload-file" class="btn btn-gray">첨부</label>
+                                        <input type="text" class="form-control" readonly title="첨부파일명">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agree-wraps" data-toggle="allChk">
+                            <span class="chk-wrap all">
+                                <input type="checkbox" id="agree-all" class="chk-all" name="terms-agree">
+                                <label for="agree-all">모두 동의합니다.</label>
+                            </span>
+                            <ul class="terms-lists">
+                                <li>
+                                    <div class="titles">
+                                        <span class="chk-wrap">
+                                        <input type="checkbox" id="terms01" name="terms-agree">
+                                        <label for="terms01">[필수] 이용약관 동의</label>
+                                    </span>
+                                        <button type="button" class="link-basic"><span>보기</span></button>
+                                    </div>
+                                    <div class="conts">
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="titles">
+                                        <span class="chk-wrap">
+                                        <input type="checkbox" id="terms02" name="terms-agree">
+                                        <label for="terms02">[필수] 개인정보 수집 및 이용 동의</label>
+                                    </span>
+                                        <button type="button" class="link-basic"><span>보기</span></button>
+                                    </div>
+                                    <div class="conts">
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="titles">
+                                        <span class="chk-wrap">
+                                        <input type="checkbox" id="terms03" name="terms-agree">
+                                        <label for="terms03">[선택] 마케팅 정보 이메일 수신 동의</label>
+                                    </span>
+                                    </div>
+                                    <div class="conts">
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="titles">
+                                        <span class="chk-wrap">
+                                        <input type="checkbox" id="terms04" name="terms-agree">
+                                        <label for="terms04">[선택] 마케팅 정보 SMS 수신 동의</label>
+                                    </span>
+                                    </div>
+                                    <div class="conts">
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감<br>
+                                        이용약관 내용이 들어감
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-lg btn-border"><span>취소</span></button>
+                            <button type="button" class="btn btn-lg btn-point"><span>신청하기</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script>
+        $(function() {
+            // 약관 '보기'
+            $('.terms-lists .link-basic').click(function() {
+                var btn = $(this);
+                var txt = btn.find('span');
+                var target = btn.closest('.titles').siblings('.conts');
+                if (btn.hasClass('open')) {
+                    btn.removeClass('open');
+                    txt.text('보기');
+                    target.slideUp();
+                } else {
+                    btn.addClass('open');
+                    txt.text('닫기');
+                    target.slideDown();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

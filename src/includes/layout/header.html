@@ -1,0 +1,20 @@
+<header@@if(context.main){ class="main"}>
+    <div class="head-cont">
+        @@if(context.main){
+            <h1><a href="/"><img src="/images/logo.png" alt="카팅"></a></h1>
+        }
+        @@if(!context.main){
+            <h1><a href="/"><img src="/images/logo-sub.png" alt="카팅"></a></h1>
+        }
+        <button type="button" class="btn-menu-all"><span class="blind">전체메뉴보기</span><span class="bar"></span></button>
+        <nav id="gnb">
+            <ul class="dep1">
+                <li><a href="/page/sub_01.html" class="depth1@@if(context.cate01){ active}">카팅소개</a></li>
+                <li><a href="/page/sub_02.html" class="depth1@@if(context.cate02){ active}">파트너스 이용안내</a></li>
+                <li><a href="/page/sub_03.html" class="depth1@@if(context.cate03){ active}">서비스 이용안내</a></li>
+                <li><a href="/page/sub_04.html" class="depth1@@if(context.cate04){ active}">회사소개</a></li>
+                <li><a href="/page/sub_05.html" class="depth1@@if(context.cate05){ active}">파트너스 신청</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
